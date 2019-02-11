@@ -17,13 +17,13 @@ require_once '../setting/fungsi.php';
   $stmt->execute();
   $stmt->store_result();
 
-  if($stmt->num_rows > 0){
+  // if($stmt->num_rows > 0){
 
-    $response['error'] = true;
-    $response['message'] = 'Email Sudah Digunakan';
-    $stmt->close();
+  //   $response['error'] = true;
+  //   $response['message'] = 'Email Sudah Digunakan';
+  //   $stmt->close();
 
-  } else {
+  // } else {
 
 
     $save = $mysqli->prepare("UPDATE mitra SET
@@ -46,6 +46,6 @@ require_once '../setting/fungsi.php';
 
       }
 
-  }
+  // }
 
   echo json_encode($response);
